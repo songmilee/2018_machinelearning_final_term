@@ -16,7 +16,7 @@ x_test.drop(x_test.columns[[0, 4, 7]], axis=1, inplace=True)
 
 
 print("Train Random Forest")
-rf = RandomForestClassifier(n_estimators=100, oob_score=True, random_state=123456)
+rf = RandomForestClassifier(n_estimators=10, oob_score=True, random_state=123456)
 rf.fit(x_train, y_train)
 
 print("Predict the result")
