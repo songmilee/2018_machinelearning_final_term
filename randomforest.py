@@ -11,9 +11,6 @@ y_train = pd.read_csv('./data/train_label.csv');
 x_test = pd.read_csv('./data/test_data.csv');
 y_test = pd.read_csv('./data/test_label.csv');
 
-x_train.drop(x_train.columns[[0, 4, 7]], axis=1, inplace=True)
-x_test.drop(x_test.columns[[0, 4, 7]], axis=1, inplace=True)
-
 
 print("Train Random Forest")
 rf = RandomForestClassifier(n_estimators=10, oob_score=True, random_state=123456)
